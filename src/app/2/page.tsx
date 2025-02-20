@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <ClientStuff />
       <div className="border p-4 rounded">
-        <Suspense fallback={<div>Loading data in 10 seconds...</div>}>
+        <Suspense fallback={<div>Loading data in 8 seconds...</div>}>
           <DataFetching />
         </Suspense>
       </div>
@@ -17,6 +17,6 @@ export default function Home() {
 }
 
 async function DataFetching() {
-  await new Promise((resolve) => setTimeout(resolve, 10000))
+  await new Promise((resolve) => setTimeout(resolve, 8000))
   return <div>Data Fetched</div>
 }
